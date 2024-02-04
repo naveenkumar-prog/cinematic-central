@@ -23,7 +23,6 @@ const Movies = () => {
 
     useEffect(()=>{
         fetchMovies()
-        // eslint-disable-next-line
     },[page,genreforURL])
 
     
@@ -54,7 +53,7 @@ const Movies = () => {
                 }
             </div>
             {numberOfPages>1 &&(
-                <CustomPagination setPage={setPage} numberOfPages={numberOfPages>500?500:numberOfPages}/>
+                <CustomPagination setPage={setPage} numberOfPages={numberOfPages}/>
             )
             }
         </div>
